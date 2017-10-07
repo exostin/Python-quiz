@@ -1,2 +1,2 @@
 # Python-quiz
-Quiz about python, written in python.
+Just a small addition for my school project.
