@@ -8,10 +8,13 @@ import string
 
 print('Welcome to quiz about python!', '\n')
 
+score = 0
 attempts = 2
 answer = ('Enter your answer: ')
 again = ('Incorrect! Try again.''\n')
-no_attempts = ('Incorrect! You ran out of your attempts.', '\n')
+no_attempts = ('Incorrect! You ran out of your attempts.''\n')
+
+name = input('Enter your name: ')
 
 
 def question(message, options, correct, attempts=attempts):
@@ -28,6 +31,7 @@ def question(message, options, correct, attempts=attempts):
         response = input(answer)
         if response == optionLetters[correct]:
             return True
+            score + 1
         else:
             attempts -= 1
             print(again)
@@ -36,15 +40,14 @@ def question(message, options, correct, attempts=attempts):
     return False
 
 
-# idk why but the answer is always +1 of what I typed in
-question1 = question('Question 1: ',
-                     ['', 'true', '', ''], 1)
-question2 = question('Question 2: ',
-                     ['', '', '', 'true'], 3)
-question3 = question('Question 3: ',
-                     ['', '', 'true', ''], 2)
-question4 = question('Question 4: ',
-                     ['', 'true', '', ''], 1)
+question1 = question('Question 1: Who created python?',
+                     ['None of Above', 'Guido van Rossum', 'Mark Zuckerberg', 'Aliens'], 1)
+question2 = question('Question 2: What is the lastest version of python?',
+                     ['4', '9', '2', '3'], 3)
+question3 = question('Question 3: Where is creator of python from?',
+                     ['USA', 'Mars', 'Netherland', 'Poland'], 2)
+question4 = question('Question 4: What sites from above are written in python?',
+                     ['YouTube', 'All of them', 'Google', 'Reddit'], 1)
 question5 = question('Question 5: ',
                      ['true', '', '', ''], 0)
 question6 = question('Question 6: ',
