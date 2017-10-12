@@ -7,8 +7,6 @@ score = 0
 answer = ('Enter your answer: ')
 with open('mydata.json') as f:
     data = json.load(f)
-data.append(name, score)
-
 while True:
     name = input('Enter your name: ')
 
@@ -54,11 +52,11 @@ while True:
                           ['', '', '', 'true'], 3)
 
     data = {'Name: ': name, 'Score: ': score}
-    with open('mydata.json', 'w') as f:
-        json.dump(data)
-
+    data.append(data)
     again = input('Do you want to do next quiz? [y/n] ').lower()
     if again == 'y':
         continue
     else:
+        with open('mydata.json', 'w') as f:
+            json.dump(data)
         break
