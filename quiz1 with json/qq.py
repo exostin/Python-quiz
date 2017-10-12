@@ -1,15 +1,14 @@
 #!/usr/bin/env python
 
-# To run it on linux: 1.Open folder with this file in terminal
-# 2.Make the file executable with: "chmod +x pycalc.py"
-# 3.Execute with: "./pycalc.py"
-# or do first step and then "phyton pycalc.py"
 import string
 import json
-
 print('Welcome to quiz about python!', '\n')
 score = 0
 answer = ('Enter your answer: ')
+with open('mydata.json') as f:
+    data = json.load(f)
+data.append(name, score)
+
 while True:
     name = input('Enter your name: ')
 
@@ -17,15 +16,15 @@ while True:
         # message - string
         # options - list
         # correct - int
-        # attempts - int
+        global score, name
 
         optionLetters = string.ascii_lowercase[:len(options)]
         print(message)
         print(' '.join('{}: {}'.format(letter, answer)
                        for letter, answer in zip(optionLetters, options)))
         response = input(answer)
-        if response == optionLetters[correct]:
-            score + 1
+        if response == (correct):
+            score = score + 1
             return True
         else:
             return False
@@ -55,8 +54,8 @@ while True:
                           ['', '', '', 'true'], 3)
 
     data = {'Name: ': name, 'Score: ': score}
-    with open('data.json', 'w') as f:
-        json.dump(data, f)
+    with open('mydata.json', 'w') as f:
+        json.dump(data)
 
     again = input('Do you want to do next quiz? [y/n] ').lower()
     if again == 'y':
