@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
-# helping /u/Exostin here: https://www.reddit.com/r/learnpython/comments/753eie/python_saving_variable_data_into_file/do9fid5/
-
 import json
 import string
+
+print('Welcome to quiz about python!')
 
 
 def question(message, options, correct):
@@ -22,25 +22,27 @@ def question(message, options, correct):
         return 0
 
 
-print('Welcome to quiz about python!')
-
 try:
-    with open('mydata.json') as f:
+    with open('data.json') as f:
         data_store = json.load(f)
 except (FileNotFoundError, json.decoder.JSONDecodeError):
     # if json file doesn't exist or is corrupt/blank, start fresh
     data_store = []
 
+# ----------- QUESTIONS ----------- #
+
 question_sets = [('\nQuestion 1: Who created python?',
-                  ['None of Above', 'Guido van Rossum', 'Mark Zuckerberg',
+                  ['None of these', 'Guido van Rossum', 'Mark Zuckerberg',
                    'Aliens'], 1),
                  ('\nQuestion 2: What is the lastest version of python?',
                   ['4', '9', '2', '3'], 3),
                  ('\nQuestion 3: Where is creator of python from?',
                   ['USA', 'Mars', 'Netherland', 'Poland'], 2),
-                 ('\nQuestion 4: What sites from above are written in python?',
+                 ('\nQuestion 4: What sites from these are written in python?',
                   ['YouTube', 'All of them', 'Google', 'Reddit'], 1),
                  ('\nQuestion 5: ', ['true', '', '', ''], 0)]
+
+# -------------------------------- #
 
 while True:
     name = input('Enter your name: ')
@@ -53,6 +55,6 @@ while True:
     if again == 'y':
         continue
     else:
-        with open('mydata.json', 'w') as f:
+        with open('data.json', 'w') as f:
             json.dump(data_store, f)
         break
