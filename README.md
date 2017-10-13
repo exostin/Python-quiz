@@ -1,2 +1,1 @@
-# Python-quiz
-Just a small addition for my school project.
+Just helping someone on Reddit, nothing of interest to see here. :)
