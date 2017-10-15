@@ -1,1 +1,18 @@
-[{"Name: ": "me", "Score: ": 2}, {"Name: ": "not me", "Score: ": 5}, {"Name: ": "you", "Score: ": 1}]
+[
+  {
+    "Name: ": "a",
+    "Score: ": 1
+  },
+  {
+    "Name: ": "b",
+    "Score: ": 5
+  },
+  {
+    "Name: ": "c",
+    "Score: ": 4
+  },
+  {
+    "Name: ": "d",
+    "Score: ": 2
+  }
+]

@@ -56,5 +56,5 @@ while True:
         continue
     else:
         with open('data.json', 'w') as f:
-            json.dump(data_store, f)
+            json.dump(data_store, f, indent=2)
         break
