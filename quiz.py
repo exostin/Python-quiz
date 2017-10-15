@@ -16,10 +16,10 @@ def question(message, options, correct):
     print(' '.join('{}: {}'.format(letter, answer)
                    for letter, answer in zip(optionLetters, options)))
     response = input(answer)
-    if response == correct:
-        return 1
+    if response.lower() == correct:
+        return True
     else:
-        return 0
+        return False
 
 
 try:
@@ -33,14 +33,14 @@ except (FileNotFoundError, json.decoder.JSONDecodeError):
 
 question_sets = [('\nQuestion 1: Who created python?',
                   ['None of these', 'Guido van Rossum', 'Mark Zuckerberg',
-                   'Aliens'], 1),
+                   'Aliens'], 'b'),
                  ('\nQuestion 2: What is the lastest version of python?',
-                  ['4', '9', '2', '3'], 3),
+                  ['4', '9', '2', '3'], 'd'),
                  ('\nQuestion 3: Where is creator of python from?',
-                  ['USA', 'Mars', 'Netherland', 'Poland'], 2),
+                  ['USA', 'Mars', 'Netherland', 'Poland'], 'c'),
                  ('\nQuestion 4: What sites from these are written in python?',
-                  ['YouTube', 'All of them', 'Google', 'Reddit'], 1),
-                 ('\nQuestion 5: ', ['true', '', '', ''], 0)]
+                  ['YouTube', 'All of them', 'Google', 'Reddit'], 'b'),
+                 ('\nQuestion 5: ', ['true', '', '', ''], 'a')]
 
 # -------------------------------- #
 
