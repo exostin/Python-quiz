@@ -9,7 +9,7 @@ print('Welcome to quiz about python!')
 def question(message, options, correct):
     # message - string
     # options - list
-    # correct - int
+    # correct - string
     answer = 'Enter your answer: '
     optionLetters = string.ascii_lowercase[:len(options)]
     print(message)
