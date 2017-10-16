@@ -40,7 +40,30 @@ question_sets = [('\nQuestion 1: Who created python?',
                   ['USA', 'Mars', 'Netherland', 'Poland'], 'c'),
                  ('\nQuestion 4: What sites from these are written in python?',
                   ['YouTube', 'All of them', 'Google', 'Reddit'], 'b'),
-                 ('\nQuestion 5: More questions?', ['yes', '', '', ''], 'a')]
+                 ('\nQuestion 5: Which of these is exponent operator?',
+                  ['**', '/', '*', '%'], 'a'),
+                 ("\nQuestion 6: What is n? n = '5'",
+                  ['String', 'Integer', 'Float', 'Tuple'], 'a'),
+                 ('\nQuestion 7: Statement using "and" operator results true if: ',
+                  ['Either of the operands is true', 'Both operands are false',
+                   'Both operands are true', 'First operand is true'], 'c'),
+                 ('\nQuestion 8: ?',
+                  ['', 'true', '', ''], 'b'),
+                 ('\nQuestion 9: ?',
+                  ['true', '', '', ''], 'a'),
+                 ('\nQuestion 10: ?',
+                  ['', '', '', 'true'], 'd'),
+                 ('\nQuestion 11: ?',
+                  ['', '', '', 'true'], 'd'),
+                 ('\nQuestion 12: ?',
+                  ['true', '', '', ''], 'a'),
+                 ('\nQuestion 13: ?',
+                  ['', 'true', '', ''], 'b'),
+                 ('\nQuestion 14: ?',
+                  ['', 'true', '', ''], 'b'),
+                 ('\nQuestion 15: ?',
+                  ['', '', 'true', ''], 'c')]
+
 
 # -------------------------------- #
 
