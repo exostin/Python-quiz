@@ -1,0 +1,19 @@
+[
+  {
+    "Q: ": "Who created python?",
+    "A: ": ["None of these", "Guido van Rossum", "Mark Zuckerberg", "Aliens"],
+  },
+  {
+    "Q: ": "What is the lastest version of python?",
+    "A: ": ["4", "9", "2", "3"]
+  },{
+    "Q: ": "Where is creator of python from?",
+    "A: ": ["USA", "Mars", "Netherland", "Poland"]
+  },{
+    "Q: ": "What sites from these are written in python?",
+    "A: ": ["YouTube", "All of them", "Google", "Reddit"]
+  },{
+    "Q: ": "More questions?",
+    "A: ": ["Definitely yes", "no", "idk", "I like bacon"]
+  },
+]

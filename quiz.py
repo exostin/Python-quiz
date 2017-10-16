@@ -40,7 +40,7 @@ question_sets = [('\nQuestion 1: Who created python?',
                   ['USA', 'Mars', 'Netherland', 'Poland'], 'c'),
                  ('\nQuestion 4: What sites from these are written in python?',
                   ['YouTube', 'All of them', 'Google', 'Reddit'], 'b'),
-                 ('\nQuestion 5: ', ['true', '', '', ''], 'a')]
+                 ('\nQuestion 5: More questions?', ['yes', '', '', ''], 'a')]
 
 # -------------------------------- #
 
