@@ -5,6 +5,6 @@ Quiz made for my school project. It has 2 functions:
 
 PS large thanks to Tom Faulkner and other redditors for help!
 
-# TO DO:
+# To do:
 - Read questions from json file (opportunity to use many languages, and make this quiz 100% universal)
 - Graphical Interface
