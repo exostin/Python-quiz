@@ -19,4 +19,7 @@ for name, score in sorted(scores, key=itemgetter(1), reverse=True):
     print('{}: {}'.format(name, score))
 
 # Need this, because program automatically ends in windows, when opened.
-time.sleep(360)
+try:
+    time.sleep(360)
+except KeyboardInterrupt:
+    pass

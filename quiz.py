@@ -3,6 +3,13 @@ import json
 import string
 
 print('Welcome to quiz about python!')
+# Defining IDEs for extra question
+ides = ['atom', 'vim', 'codeblocks', 'visualstudiocode',
+        'codelite', 'dialogblocks', 'eclipse', 'netbeans',
+        'komodo', 'aptanastudio', 'geany', 'shiftedit',
+        'squad', 'visualstudio', 'monodevelop', 'pycharm',
+        'kate', 'gedit', 'sublimetext', 'vscode', 'fuckyou',
+        'what am I even doing here ;_;']
 
 
 def questionDef(message, options, correct):
@@ -16,7 +23,7 @@ def questionDef(message, options, correct):
 
     # Prints out questions and options from question sets
     print(message)
-    print(' '.join('{}: {}'.format(letter, answer)
+    print(' '.join('\n{}: {}'.format(letter, answer)
                    for letter, answer in zip(optionLetters, options)))
     response = input(answer)
     if response.lower() == correct:
@@ -50,12 +57,15 @@ question_sets = [('\nQuestion 1: Who created python?',
                  ('\nQuestion 7: Statement using "and" operator results true if: ',
                   ['Either of the operands is true', 'Both operands are false',
                    'Both operands are true', 'First operand is true'], 'c'),
-                 ('\nQuestion 8: ?',
-                  ['', 'true', '', ''], 'b'),
-                 ('\nQuestion 9: ?',
-                  ['true', '', '', ''], 'a'),
-                 ('\nQuestion 10: ?',
-                  ['', '', '', 'true'], 'd')]
+                 ('\nQuestion 8: What is symbol for writing a comment in Python?',
+                  ['//', '#', '/*', '~'], 'b'),
+                 ('\nQuestion 9: What is the difference between == and =?',
+                  ['== compares whether two things are equal and = assigns a value to a variable',
+                   '== assigns a value to a variable and = compares whether two things are equal',
+                   'both == and = can be used interchangeably',
+                   'both == and = only assign values to variables'], 'a'),
+                 ('\nQuestion 10: What do boolean operators return?',
+                  ['Float', 'String', 'Integers', 'True/False'], 'd')]
 
 # -------------------------------- #
 
@@ -68,6 +78,15 @@ while True:
     for q in question_sets:
         score += questionDef(*q)
 
+    print('\n(-1 point if your answer is wrong)')
+    extra = input("Do you want extra question? [y/n] ")
+    if extra == 'y':
+        ide_extra = input(
+            'Enter name of one of popular IDEs. (without spaces,  pure string)\n').lower()
+        if ide_extra in ides:
+            score += 1
+        else:
+            score -= 1
     data_store.append({'Name: ': name, 'Score: ': score})
     again = input('Do you want to do next quiz? [y/n] ').lower()
     if again == 'y':
