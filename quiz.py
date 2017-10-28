@@ -10,8 +10,10 @@ def questionDef(message, options, correct):
     # options - list
     # correct - string
     answer = 'Enter your answer: '
+
     # Defines a, b, c option letters
     optionLetters = string.ascii_lowercase[:len(options)]
+
     # Prints out questions and options from question sets
     print(message)
     print(' '.join('{}: {}'.format(letter, answer)
@@ -60,6 +62,7 @@ question_sets = [('\nQuestion 1: Who created python?',
 while True:
     name = input('Enter your name: ')
     score = 0
+
     # For each question in question sets, it calls questionDef,
     # and adds score for correct answer
     for q in question_sets:
