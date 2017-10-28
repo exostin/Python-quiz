@@ -1,69 +1,4 @@
-
 [{
-    "question": "?",
-    "a": "",
-    "b": "",
-    "c": "",
-    "d": "",
-    "answer": ""
-},
-{
-    "question": "?",
-    "a": "",
-    "b": "",
-    "c": "",
-    "d": "",
-    "answer": ""
-},
-{
-    "question": "?",
-    "a": "",
-    "b": "",
-    "c": "",
-    "d": "",
-    "answer": ""
-},
-{
-    "question": "?",
-    "a": "",
-    "b": "",
-    "c": "",
-    "d": "",
-    "answer": ""
-},
-{
-    "question": "?",
-    "a": "",
-    "b": "",
-    "c": "",
-    "d": "",
-    "answer": ""
-},
-{
-    "question": "?",
-    "a": "",
-    "b": "",
-    "c": "",
-    "d": "",
-    "answer": ""
-},
-{
-    "question": "?",
-    "a": "",
-    "b": "",
-    "c": "",
-    "d": "",
-    "answer": ""
-},
-{
-    "question": "?",
-    "a": "",
-    "b": "",
-    "c": "",
-    "d": "",
-    "answer": ""
-},
-{
     "question": "Statement using 'and' operator results true if: ",
     "a": "Either of the operands is true",
     "b": "Both operands are false",
@@ -118,4 +53,28 @@
     "c": "Float",
     "d": "Tuple",
     "answer": "a"
+},
+{
+    "question": "?",
+    "a": "",
+    "b": "",
+    "c": "",
+    "d": "True",
+    "answer": "d"
+},
+{
+    "question": "?",
+    "a": "True",
+    "b": "",
+    "c": "",
+    "d": "",
+    "answer": "a"
+},
+{
+    "question": "?",
+    "a": "",
+    "b": "True",
+    "c": "",
+    "d": "",
+    "answer": "b"
 }]
