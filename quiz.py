@@ -1,32 +1,33 @@
 #!/usr/bin/env python
-
 import json
 import string
 
 print('Welcome to quiz about python!')
 
 
-def question(message, options, correct):
+def questionDef(message, options, correct):
     # message - string
     # options - list
     # correct - string
     answer = 'Enter your answer: '
+    # Defines a, b, c option letters
     optionLetters = string.ascii_lowercase[:len(options)]
+    # Prints out questions and options from question sets
     print(message)
     print(' '.join('{}: {}'.format(letter, answer)
                    for letter, answer in zip(optionLetters, options)))
     response = input(answer)
     if response.lower() == correct:
-        return True
+        return 1
     else:
-        return False
+        return 0
 
 
 try:
     with open('data.json') as f:
         data_store = json.load(f)
+# If json file doesn't exist or is corrupt/blank, start fresh
 except (FileNotFoundError, json.decoder.JSONDecodeError):
-    # if json file doesn't exist or is corrupt/blank, start fresh
     data_store = []
 
 # ----------- QUESTIONS ----------- #
@@ -52,32 +53,24 @@ question_sets = [('\nQuestion 1: Who created python?',
                  ('\nQuestion 9: ?',
                   ['true', '', '', ''], 'a'),
                  ('\nQuestion 10: ?',
-                  ['', '', '', 'true'], 'd'),
-                 ('\nQuestion 11: ?',
-                  ['', '', '', 'true'], 'd'),
-                 ('\nQuestion 12: ?',
-                  ['true', '', '', ''], 'a'),
-                 ('\nQuestion 13: ?',
-                  ['', 'true', '', ''], 'b'),
-                 ('\nQuestion 14: ?',
-                  ['', 'true', '', ''], 'b'),
-                 ('\nQuestion 15: ?',
-                  ['', '', 'true', ''], 'c')]
-
+                  ['', '', '', 'true'], 'd')]
 
 # -------------------------------- #
 
 while True:
     name = input('Enter your name: ')
     score = 0
+    # For each question in question sets, it calls questionDef,
+    # and adds score for correct answer
     for q in question_sets:
-        score += question(*q)
+        score += questionDef(*q)
 
     data_store.append({'Name: ': name, 'Score: ': score})
     again = input('Do you want to do next quiz? [y/n] ').lower()
     if again == 'y':
         continue
     else:
+        # Saves data into json file
         with open('data.json', 'w') as f:
             json.dump(data_store, f, indent=2)
         break
