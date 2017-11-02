@@ -1,36 +1,48 @@
-#!/usr/bin/env python
 import json
-import string
-
-print('Welcome to quiz about python!')
-# Defining IDEs for extra question
-ides = ['atom', 'vim', 'codeblocks', 'visualstudiocode',
-        'codelite', 'dialogblocks', 'eclipse', 'netbeans',
-        'komodo', 'aptanastudio', 'geany', 'shiftedit',
-        'squad', 'visualstudio', 'monodevelop', 'pycharm',
-        'kate', 'gedit', 'sublimetext', 'vscode', 'fuckyou',
-        'what am I even doing here ;_;']
+from operator import itemgetter
 
 
-def questionDef(message, options, correct):
-    # message - string
-    # options - list
-    # correct - string
+def questionDef(message, a, b, c, d, correct):
     answer = 'Enter your answer: '
 
-    # Defines a, b, c option letters
-    optionLetters = string.ascii_lowercase[:len(options)]
-
     # Prints out questions and options from question sets
-    print(message)
-    print(' '.join('\n{}: {}'.format(letter, answer)
-                   for letter, answer in zip(optionLetters, options)))
+    print('\n> ' + message)
+    print('\na: {} \nb: {} \nc: {} \nd: {}'.format(a, b, c, d))
     response = input(answer)
     if response.lower() == correct:
         return 1
     else:
         return 0
 
+
+# Defining IDEs for extra question
+ides = ['atom', 'vim', 'codeblocks', 'visualstudiocode',
+        'codelite', 'dialogblocks', 'eclipse', 'netbeans',
+        'komodo', 'aptanastudio', 'geany', 'shiftedit',
+        'squad', 'visualstudio', 'monodevelop', 'pycharm',
+        'kate', 'gedit', 'sublimetext', 'vscode', 'visualstudio'
+        'what am I even doing here ;_;', 'vs']
+
+print('Welcome to quiz about python!')
+
+# Chooses which language to initialize
+while True:
+    language = input('Choose language [en/pl]: ').lower()
+    if language == 'en':
+        # (need to be tested) on windows you will probably need to change "/" to "\" in destination path
+        with open('question_sets/questions_en.json', 'r') as f:
+            questionsets = json.load(f)
+            questiondict = []
+        break
+    elif language == 'pl':
+        # (need to be tested) on windows you will probably need to change "/" to "\" in destination path
+        with open('question_sets/questions_pl.json', 'r') as f:
+            questionsets = json.load(f)
+            questiondict = []
+        break
+    else:
+        print('This language isn\'t currently supported. Try again.')
+        continue
 
 try:
     with open('data.json') as f:
@@ -39,45 +51,24 @@ try:
 except (FileNotFoundError, json.decoder.JSONDecodeError):
     data_store = []
 
-# ----------- QUESTIONS ----------- #
+for item in questionsets:
+    question = item['Question']
+    a = item['a']
+    b = item['b']
+    c = item['c']
+    d = item['d']
+    answer = item['answer']
+    questiondict.append((question, a, b, c, d, answer))
 
-question_sets = [('\nQuestion 1: Who created python?',
-                  ['None of these', 'Guido van Rossum', 'Mark Zuckerberg',
-                   'Aliens'], 'b'),
-                 ('\nQuestion 2: What is the lastest version of python?',
-                  ['4', '9', '2', '3'], 'd'),
-                 ('\nQuestion 3: Where is creator of python from?',
-                  ['USA', 'Mars', 'Netherland', 'Poland'], 'c'),
-                 ('\nQuestion 4: What sites from these are written in python?',
-                  ['YouTube', 'All of them', 'Google', 'Reddit'], 'b'),
-                 ('\nQuestion 5: Which of these is exponent operator?',
-                  ['**', '/', '*', '%'], 'a'),
-                 ("\nQuestion 6: What is n? n = '5'",
-                  ['String', 'Integer', 'Float', 'Tuple'], 'a'),
-                 ('\nQuestion 7: Statement using "and" operator results true if: ',
-                  ['Either of the operands is true', 'Both operands are false',
-                   'Both operands are true', 'First operand is true'], 'c'),
-                 ('\nQuestion 8: What is symbol for writing a comment in Python?',
-                  ['//', '#', '/*', '~'], 'b'),
-                 ('\nQuestion 9: What is the difference between == and =?',
-                  ['== compares whether two things are equal and = assigns a value to a variable',
-                   '== assigns a value to a variable and = compares whether two things are equal',
-                   'both == and = can be used interchangeably',
-                   'both == and = only assign values to variables'], 'a'),
-                 ('\nQuestion 10: What do boolean operators return?',
-                  ['Float', 'String', 'Integers', 'True/False'], 'd')]
-
-# -------------------------------- #
-
+# Quiz loop
 while True:
     name = input('Enter your name: ')
     score = 0
 
     # For each question in question sets, it calls questionDef,
     # and adds score for correct answer
-    for q in question_sets:
+    for q in questiondict:
         score += questionDef(*q)
-
     print('\n(-1 point if your answer is wrong)')
     extra = input("Do you want extra question? [y/n] ")
     if extra == 'y':

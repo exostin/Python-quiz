@@ -1,0 +1,82 @@
+[
+{
+    "Question": "Co zwraca operator typu logicznego (boolowski) np. 'not'?",
+    "a": "Integers (liczba całkowita)",
+    "b": "Float (liczba rzeczywista)",
+    "c": "String (napis)",
+    "d": "True/False",
+    "answer": "d"
+},
+{
+    "Question": "Kto stworzył język python?",
+    "a": "Nikt z tych",
+    "b": "Guido van Rossum",
+    "c": "Mark Zuckerberg",
+    "d": "Kosmici",
+    "answer": "b"
+},
+{
+    "Question": "Która z tych, jest najnowszą wersją pythona (na rok 2017)?",
+    "a": "4",
+    "b": "9",
+    "c": "2",
+    "d": "3",
+    "answer": "d"
+},
+{
+    "Question": "Skąd pochodzi twórca pythona?",
+    "a": "USA",
+    "b": "Mars",
+    "c": "Holandia",
+    "d": "Polska",
+    "answer": "c"
+},
+{
+    "Question": "Które z tych stron są napisane w pythonie?",
+    "a": "YouTube",
+    "b": "Wszystkie z tych",
+    "c": "Google",
+    "d": "Reddit",
+    "answer": "b"
+},
+{
+    "Question": "Który z tych operatorów jest od potęgowania?",
+    "a": "**",
+    "b": "^",
+    "c": "*",
+    "d": "%",
+    "answer": "a"
+},
+{
+    "Question": "Czym będzie zmienna 'n' w tej sytuacji: n = '5'?",
+    "a": "String (napis)",
+    "b": "Integer (liczba całkowita)",
+    "c": "Float (liczba rzeczywista)",
+    "d": "Tuple (krotka)",
+    "answer": "a"
+},
+{
+    "Question": "Jaka jest różnica pomiędzy == a =?",
+    "a": "== porównuje czy 2 rzeczy są równe, a = nadaje zmiennej wartość.",
+    "b": "== nadaje zmiennej wartość, a = porównuje czy 2 rzeczy są równe.",
+    "c": "== i = mogą być używane zamiennie do porównywania wartości zmiennych.",
+    "d": "== i = mogą być używane zamiennie do nadawania wartości zmiennej.",
+    "answer": "a"
+},
+{
+    "Question": "Jakim symbolem rozpoczyna się komentarze w pythonie?",
+    "a": "//",
+    "b": "#",
+    "c": "--",
+    "d": "~",
+    "answer": "b"
+},
+{
+    "Question": "Operator 'and' zwraca prawdę gdy: ",
+    "a": "Któraś z wartości jest prawdziwa",
+    "b": "Obie wartości są fałszywe",
+    "c": "Obie wartości są prawdziwe",
+    "d": "Pierwsza wartość jest prawdziwa",
+    "answer": "c"
+}
+]

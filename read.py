@@ -1,7 +1,11 @@
 #!/usr/bin/env python
 import json
-import time
+import string
 from operator import itemgetter
+
+# Defining characters for exit variable
+possibleCharacters = string.ascii_lowercase + \
+    string.digits + string.ascii_uppercase + ' .,!?;:'
 
 # Opens file with data
 with open('data.json', 'r') as f:
@@ -19,7 +23,8 @@ for name, score in sorted(scores, key=itemgetter(1), reverse=True):
     print('{}: {}'.format(name, score))
 
 # Need this, because program automatically ends in windows, when opened.
-try:
-    time.sleep(360)
-except KeyboardInterrupt:
+exit = input('Enter anything to end. ')
+if exit in possibleCharacters:
+    pass
+else:
     pass
