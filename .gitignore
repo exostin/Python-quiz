@@ -1,2 +1,4 @@
 # Editor files
 .vscode
+# Data file
+data.json
