@@ -21,7 +21,7 @@ ides = ['atom', 'vim', 'codeblocks', 'visualstudiocode',
         'komodo', 'aptanastudio', 'geany', 'shiftedit',
         'squad', 'visualstudio', 'monodevelop', 'pycharm',
         'kate', 'gedit', 'sublimetext', 'vscode', 'visualstudio'
-        'what am I even doing here ;_;', 'vs']
+        'what am i even doing here ;_;', 'vs', 'idle']
 
 print('Welcome to quiz about python!')
 

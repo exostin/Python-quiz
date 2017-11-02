@@ -20,7 +20,7 @@ ides = ['atom', 'vim', 'codeblocks', 'visualstudiocode',
         'komodo', 'aptanastudio', 'geany', 'shiftedit',
         'squad', 'visualstudio', 'monodevelop', 'pycharm',
         'kate', 'gedit', 'sublimetext', 'vscode', 'visualstudio'
-        'what am I even doing here ;_;', 'vs']
+        'co ja tutaj robie ;_;', 'vs', 'idle']
 
 print('Witamy w quizie o pythonie!')
 
