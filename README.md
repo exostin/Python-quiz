@@ -8,5 +8,5 @@ PS large thanks to Tom Faulkner and other redditors for help!
 
 # To do:
 - [x] Read questions from json file, making it universal
-- [] Graphical Interface
-- [] Program for filling question sets - 1.How much questions? 2.How much options? 3.Question>options>answer 4.repeat no.3
+- [ ] Graphical Interface
+- [ ] Program for filling question sets - 1.How much questions? 2.How much options? 3.Question>options>answer 4.repeat no.3
