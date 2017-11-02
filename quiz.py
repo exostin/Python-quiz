@@ -40,6 +40,12 @@ while True:
             questionsets = json.load(f)
             questiondict = []
         break
+ #   elif language == 'enter abbreviation of your questionset here':
+ #       # (need to be tested) on windows you will probably need to change "/" to "\" in destination path
+ #       with open('question_sets/your question set name here.json', 'r') as f:
+ #           questionsets = json.load(f)
+ #           questiondict = []
+ #       break
     else:
         print('This language isn\'t currently supported. Try again.')
         continue
@@ -69,7 +75,7 @@ while True:
     # and adds score for correct answer
     for q in questiondict:
         score += questionDef(*q)
-    print('\n(-1 point if your answer is wrong)')
+    print('\n(-1 point if your answer is wrong in extra question)')
     extra = input("Do you want extra question? [y/n] ")
     if extra == 'y':
         ide_extra = input(
