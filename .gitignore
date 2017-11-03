@@ -2,3 +2,5 @@
 .vscode
 # Data file
 data.json
+
+functions/__pycashe__
