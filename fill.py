@@ -1,15 +1,22 @@
 import json
+import os
+
+# Defining dash, because in windows it is \ while in linux/mac it is /
+if os.name == 'nt':
+    dash = "\\"
+else:
+    dash = "/"
+
 # Defining possible answers.
 p_answers = ['a', 'b', 'c', 'd']
-# creating empty file for questionsets
 while True:
     quest_number = 0
     questionset = input('Enter your questionset name: ')
-    file = "question_sets/{}.json".format(questionset)
+    file = "question_sets{}{}.json".format(dash, questionset)
     fptr = open(file, "w")
     # Open questionset file
     try:
-        with open('questions_sets/{}.json'.format(questionset)) as f:
+        with open('questions_sets{}{}.json'.format(dash, questionset)) as f:
             questions_store = json.load(f)
     # If json file doesn't exist or is corrupt/blank, start fresh
     except (FileNotFoundError, json.decoder.JSONDecodeError):

@@ -1,5 +1,12 @@
+import os
 import json
 from operator import itemgetter
+
+# Defining dash, because in windows it is \ while in linux/mac it is /
+if os.name == 'nt':
+    dash = "\\"
+else:
+    dash = "/"
 
 
 def questionDef(message, a, b, c, d, correct):
@@ -29,20 +36,17 @@ print('Welcome to quiz about python!')
 while True:
     language = input('Choose language [en/pl]: ').lower()
     if language == 'en':
-        # (need to be tested) on windows you will probably need to change "/" to "\" in destination path
-        with open('question_sets/questions_en.json', 'r') as f:
+        with open('question_sets{}questions_en.json'.format(dash), 'r') as f:
             questionsets = json.load(f)
-            questiondict = []
+        questiondict = []
         break
     elif language == 'pl':
-        # (need to be tested) on windows you will probably need to change "/" to "\" in destination path
-        with open('question_sets/questions_pl.json', 'r') as f:
+        with open('question_sets{}questions_pl.json'.format(dash), 'r') as f:
             questionsets = json.load(f)
-            questiondict = []
+        questiondict = []
         break
  #   elif language == 'enter abbreviation of your questionset here':
- #       # (need to be tested) on windows you will probably need to change "/" to "\" in destination path
- #       with open('question_sets/your question set name here.json', 'r') as f:
+ #       with open('question_sets{}your question set name here.json'.format(dash), 'r') as f:
  #           questionsets = json.load(f)
  #           questiondict = []
  #       break
