@@ -9,6 +9,8 @@ Quiz made for my school project. It has 4 functions:
 - [x] Read questions from json file, making it universal
 - [ ] Graphical Interface
 - [x] Function for making your own question sets.
+- [ ] Only possible name for file in system. (fill function)
+- [ ] Fill function add open function to quiz code
 
 
 PS large thanks to Tom Faulkner and other redditors for help!
