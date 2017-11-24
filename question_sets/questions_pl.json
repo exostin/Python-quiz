@@ -1,82 +1,82 @@
 [
-{
+  {
     "Question": "Co zwraca operator typu logicznego (boolowski) np. 'not'?",
-    "a": "Integers (liczba całkowita)",
+    "a": "Integers (liczba ca\u0142kowita)",
     "b": "Float (liczba rzeczywista)",
     "c": "String (napis)",
     "d": "True/False",
     "answer": "d"
-},
-{
-    "Question": "Kto stworzył język python?",
-    "a": "Nikt z tych",
+  },
+  {
+    "Question": "Kto stworzy\u0142 j\u0119zyk programowania Python?",
+    "a": "Nikt z podanych",
     "b": "Guido van Rossum",
     "c": "Mark Zuckerberg",
     "d": "Kosmici",
     "answer": "b"
-},
-{
-    "Question": "Która z tych, jest najnowszą wersją pythona (na rok 2017)?",
+  },
+  {
+    "Question": "Kt\u00f3ra z podanych jest najnowsz\u0105 wersj\u0105 pythona? (rok 2017)",
     "a": "4",
     "b": "9",
     "c": "2",
     "d": "3",
     "answer": "d"
-},
-{
-    "Question": "Skąd pochodzi twórca pythona?",
+  },
+  {
+    "Question": "Sk\u0105d pochodzi tw\u00f3rca pythona?",
     "a": "USA",
     "b": "Mars",
     "c": "Holandia",
     "d": "Polska",
     "answer": "c"
-},
-{
-    "Question": "Które z tych stron są napisane w pythonie?",
+  },
+  {
+    "Question": "Kt\u00f3re strony z podanych u\u017cywaj\u0105 pythona?",
     "a": "YouTube",
     "b": "Wszystkie z tych",
     "c": "Google",
     "d": "Reddit",
     "answer": "b"
-},
-{
-    "Question": "Który z tych operatorów jest od potęgowania?",
+  },
+  {
+    "Question": "Kt\u00f3ry z poni\u017cszych operator\u00f3w jest od pot\u0119gowania?",
     "a": "**",
     "b": "^",
     "c": "*",
     "d": "%",
     "answer": "a"
-},
-{
-    "Question": "Czym będzie zmienna 'n' w tej sytuacji: n = '5'?",
+  },
+  {
+    "Question": "Czym b\u0119dzie zmienna n w tej sytuacji: n = '5'?",
     "a": "String (napis)",
-    "b": "Integer (liczba całkowita)",
+    "b": "Integer (liczba ca\u0142kowita)",
     "c": "Float (liczba rzeczywista)",
     "d": "Tuple (krotka)",
     "answer": "a"
-},
-{
-    "Question": "Jaka jest różnica pomiędzy == a =?",
-    "a": "== porównuje czy 2 rzeczy są równe, a = nadaje zmiennej wartość.",
-    "b": "== nadaje zmiennej wartość, a = porównuje czy 2 rzeczy są równe.",
-    "c": "== i = mogą być używane zamiennie do porównywania wartości zmiennych.",
-    "d": "== i = mogą być używane zamiennie do nadawania wartości zmiennej.",
+  },
+  {
+    "Question": "Jaka jest r\u00f3\u017cnica pomi\u0119dzy == a =?",
+    "a": "== por\u00f3wnuje czy 2 rzeczy s\u0105 r\u00f3wne, a = nadaje zmiennej warto\u015b\u0107.",
+    "b": "== nadaje zmiennej warto\u015b\u0107, a = por\u00f3wnuje czy 2 rzeczy s\u0105 r\u00f3wne.",
+    "c": "== i = mog\u0105 by\u0107 u\u017cywane zamiennie do por\u00f3wnywania warto\u015bci.",
+    "d": "== i = mog\u0105 by\u0107 u\u017cywane zamiennie do nadawania warto\u015bci zmiennej.",
     "answer": "a"
-},
-{
-    "Question": "Jakim symbolem rozpoczyna się komentarze w pythonie?",
+  },
+  {
+    "Question": "Jakim symbolem rozpoczyna si\u0119 komentarze w pythonie?",
     "a": "//",
     "b": "#",
     "c": "--",
     "d": "~",
     "answer": "b"
-},
-{
-    "Question": "Operator 'and' zwraca prawdę gdy: ",
-    "a": "Któraś z wartości jest prawdziwa",
-    "b": "Obie wartości są fałszywe",
-    "c": "Obie wartości są prawdziwe",
-    "d": "Pierwsza wartość jest prawdziwa",
+  },
+  {
+    "Question": "Operator 'and' zwraca prawd\u0119 gdy:",
+    "a": "Kt\u00f3ra\u015b z por\u00f3wnywanych warto\u015bci jest prawdziwa.",
+    "b": "Obie warto\u015bci s\u0105 fa\u0142szywe.",
+    "c": "Obie warto\u015bci s\u0105 prawdziwe.",
+    "d": "Pierwsza warto\u015b\u0107 jest prawdziwa.",
     "answer": "c"
-}
+  }
 ]
