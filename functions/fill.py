@@ -44,7 +44,7 @@ def main_fill():
                     print('You can select only a/b/c/d for answer.')
                     continue
             # Append question set data.
-            questions_store.append({'question': question, 'a': a,
+            questions_store.append({'Question': question, 'a': a,
                                     'b': b, 'c': c, 'd': d, 'answer': answer})
             if quest_number == how_many_q:
                 break
