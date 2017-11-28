@@ -83,9 +83,9 @@ def main_quiz():
             ide_extra = input(
                 'Enter name of one of popular IDEs. (without spaces,  pure string)\n').lower()
             if ide_extra in ides:
-                score += 1
+                score += 2
             else:
-                score -= 1
+                score -= 2
         data_store.append({'Name: ': name, 'Score: ': score})
         again = input('Do you want to do next quiz? [y/n] ').lower()
         if again == 'y':
