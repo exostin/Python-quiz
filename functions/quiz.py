@@ -26,7 +26,7 @@ def main_quiz():
             'komodo', 'aptanastudio', 'geany', 'shiftedit',
             'squad', 'visualstudio', 'monodevelop', 'pycharm',
             'kate', 'gedit', 'sublimetext', 'vscode', 'visualstudio'
-            'what am i even doing here ;_;', 'vs', 'idle']
+            'what am i even doing here', 'co ja tutaj robie', 'vs', 'idle']
 
     print('Welcome to quiz about python!')
 
@@ -81,11 +81,11 @@ def main_quiz():
         extra = input("Do you want extra question? [y/n] ")
         if extra == 'y':
             ide_extra = input(
-                'Enter name of one of popular IDEs. (without spaces,  pure string)\n').lower()
+                'Enter name of one of popular IDEs. (without spaces, ex. thisissuperide)\n').lower()
             if ide_extra in ides:
                 score += 2
             else:
-                score -= 2
+                score -= 1
         data_store.append({'Name: ': name, 'Score: ': score})
         again = input('Do you want to do next quiz? [y/n] ').lower()
         if again == 'y':
