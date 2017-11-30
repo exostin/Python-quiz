@@ -10,7 +10,8 @@ Quiz made for my school project. It has 4 functions:
 - [ ] Graphical Interface
 - [x] Function for making your own question sets.
 - [ ] Only possible name for file in system. (fill function) (possiblecharacters = blablabla)
-- [ ] Fill function adds another option for quiz.
+- [ ] Fill function adds another option for quiz (abreviation + path)
+- [ ] Print out questions in randomized order
 
 
 PS large thanks to Tom Faulkner and other redditors for help!
