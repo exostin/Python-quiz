@@ -10,8 +10,9 @@ Quiz made for my school project. It has 4 functions:
 - [ ] Graphical Interface
 - [x] Function for making your own question sets.
 - [ ] Only possible name for file in system. (fill function) (/ \ : * ? " > < |)
-- [ ] Fill function adds another option for quiz (abreviation + path)
+- [ ] Fill function adds another option for config.json (abreviation + path)
 - [ ] Print out questions in randomized order
+- [ ] Make config.json. Questions set name; Path; Abbreviation. Quiz will load questionsets from there, and fill will store them there. 
 
 
 PS large thanks to Tom Faulkner and other redditors for help!
