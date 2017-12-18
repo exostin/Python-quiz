@@ -6,12 +6,19 @@ def main_fill():
         dash = "\\"
     else:
         dash = "/"
-
+    # Defining not possible characters for file name
+    notpossiblechars = ["/", ":", "*", "?", "\\", "\"", "<", ">", "|"]
     # Defining possible answers.
     p_answers = ['a', 'b', 'c', 'd']
     while True:
         quest_number = 0
-        questionset = input('Enter your questionset name: ')
+        while True:
+            questionset = input('Enter your questionset name: ')
+            if questionset not in notpossiblechars:
+                break
+            else:
+                print("You can't enter these: / \ : * ? \" > < |")
+                continue
         file = "question_sets{}{}.json".format(dash, questionset)
         fptr = open(file, "w")
         # Open questionset file
