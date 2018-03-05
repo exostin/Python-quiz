@@ -89,6 +89,7 @@ def main_quiz():
         data_store.append({'Name: ': name, 'Score: ': score})
         again = input('Do you want to do next quiz? [y/n] ').lower()
         if again == 'y':
+            os.system('cls')
             continue
         else:
             # Saves data into json file
