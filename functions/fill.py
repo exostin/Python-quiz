@@ -14,11 +14,11 @@ def main_fill():
         quest_number = 0
         while True:
             questionset = input('Enter your questionset name: ')
-            if questionset not in notpossiblechars:
-                break
-            else:
-                print("You can't enter these: / \ : * ? \" > < |")
+            if True in [c in questionset for c in notpossiblechars]:
+                print("You can't enter these: / : * ? \" > < | ")
                 continue
+            else:
+                break
         file = "question_sets{}{}.json".format(dash, questionset)
         fptr = open(file, "w")
         # Open questionset file
