@@ -6,8 +6,8 @@ def main_read():
     possibleCharacters = string.ascii_lowercase + \
         string.digits + string.ascii_uppercase + ' .,!?;:'
 
-    # Opens file with data
-    with open('data.json', 'r') as f:
+    # Opens file data_scores
+    with open('data_scores.json', 'r') as f:
         data = json.load(f)
     scores = []  # Create temporary score variable
 
