@@ -7,11 +7,10 @@ Quiz made for my school project. It has 4 functions:
 
 # To do:
 - [x] Read questions from json file
-- [ ] Graphical Interface
+- [ ] UI
 - [x] Function for making your own question sets.
 - [x] Check if this file name is possible. (These characters: / \ : * ? " > < |)
-- [ ] Fill function adds another option for config.json (abreviation + path)
-- [ ] Print out questions in randomized order
+- [x] Print out questions in randomized order
 - [ ] Make config.json. Questions set name; Path; Abbreviation. Quiz will load questionsets from there, and fill will store them there. 
 
 

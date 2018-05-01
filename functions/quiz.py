@@ -2,6 +2,7 @@ def main_quiz():
     import os
     import json
     from operator import itemgetter
+    from random import shuffle
     # Defining dash, because in windows it is \ while in linux/mac it is /
     if os.name == 'nt':
         dash = "\\"
@@ -25,8 +26,9 @@ def main_quiz():
             'codelite', 'dialogblocks', 'eclipse', 'netbeans',
             'komodo', 'aptanastudio', 'geany', 'shiftedit',
             'squad', 'visualstudio', 'monodevelop', 'pycharm',
-            'kate', 'gedit', 'sublimetext', 'vscode', 'visualstudio'
-            'what am i even doing here', 'co ja tutaj robie', 'vs', 'idle']
+            'kate', 'gedit', 'sublimetext', 'vscode', 'visualstudio',
+            'co ja tutaj robie', 'vs', 'idle', 'vscodeinsiders',
+            'visualstudiocodeinsiders', '02112003']
 
     print('Welcome to quiz about python!')
 
@@ -70,6 +72,7 @@ def main_quiz():
 
     # Quiz loop
     while True:
+        shuffle(questiondict)
         name = input('Enter your name: ')
         score = 0
 
@@ -93,6 +96,6 @@ def main_quiz():
             continue
         else:
             # Saves data into json file
-            with open('data.json', 'w') as f:
+            with open('data_scores.json', 'w') as f:
                 json.dump(data_store, f, indent=2)
             break
