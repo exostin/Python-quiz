@@ -2,7 +2,7 @@ import sys
 import webbrowser
 import os
 
-# Defining dash, because in windows it is \ while in linux/mac it is /
+# Defining dash, because in windows it is '\' while in linux&mac it is '/'
 if os.name == 'nt':
     dash = "\\"
 else:
@@ -15,11 +15,12 @@ from fill import main_fill
 
 try:
     while True:
+        os.system('cls')
         print('''Quiz (q) - take the quiz
 Read (r) - read scores from quiz
 Fill (f) - make your own question set for quiz
 GitHub (git) - Launches this project link in your default browser
-Nevermind (nvm) - Exit''')
+Let me go! (exit)''')
         while True:
             choice = input('Enter your choice: ').lower()
             if choice == 'q':
@@ -34,15 +35,11 @@ Nevermind (nvm) - Exit''')
             elif choice == "git":
                 webbrowser.open("https://github.com/exostin/Python-quiz")
                 break
-            elif choice == 'nvm':
+            elif choice == 'exit':
                 sys.exit(0)
             else:
                 print("Wrong input! Try again.")
                 continue
-        again = input('Do you want to do something more? [y/n] ').lower()
-        if again == 'y':
-            continue
-        else:
-            break
+        continue
 except KeyboardInterrupt:
     print("Shutdown requested...exiting")
