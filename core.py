@@ -7,6 +7,7 @@ if os.name == 'nt':
     dash = "\\"
 else:
     dash = "/"
+
 # Changing path to another directory to import functions from it
 sys.path.append("functions{}".format(dash))
 from quiz import main_quiz

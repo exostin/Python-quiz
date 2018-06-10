@@ -1,6 +1,7 @@
 def main_fill():
     import json
     import os
+
     # Defining dash, because in windows it is \ while in linux/mac it is /
     if os.name == 'nt':
         dash = "\\"
